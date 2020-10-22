@@ -10,7 +10,6 @@ namespace Adventure
 
 		string characterName = NameCharacter();
 
-
     Console.ReadLine();
   }
 
@@ -34,6 +33,20 @@ namespace Adventure
 		Console.WriteLine();
 		Console.WriteLine($"I wish you the best of luck during your journey { output }");
 		return output;
+	}
+
+	private static void Dialog(string message)
+	{
+		Console.ForegroundColor = ConsoleColor.Cyan;
+		Console.WriteLine(message);
+		Console.ResetColor();
+	}
+
+	private static void Choice()
+	{
+		string input = "";
+		Console.Write("Which will you choose? A or B: ");
+		input = Console.ReadLine();
 	}
 }
 }
